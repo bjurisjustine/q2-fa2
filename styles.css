@@ -1,0 +1,136 @@
+*{margin: 0;padding: 0; box-sizing: border-box; }
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 6dvh;
+    overflow-x: hidden;
+}
+a{text-decoration: none; color: white}
+a:visited{ text-decoration: underline;}
+header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2dvh;
+    padding-bottom: 2dvh;
+    background: #1d1d1da1;
+    color: white;
+    position: fixed;
+    width: 100dvw;
+    font-family:Georgia, 'Times New Roman';
+    font-size: 1.1rem;
+    
+}
+main{}
+header{position: fixed; z-index: 98;}
+section{
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    overflow: hidden;
+    padding-top: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+h1{
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    z-index: 99;
+    text-align: center;
+    top: 25vh;
+    text-shadow: 5px 5px black;
+    color: white;
+}
+section#banner{
+    position: relative;
+    z-index: 80;
+    padding: 0;
+    background: linear-gradient(117deg, rgb(61, 18, 61) 0%, rgba(7,7,79,1) 68%, rgb(26, 0, 128) 100%);
+
+  
+}
+
+section#instructions{
+    background: white;
+}
+#instructions > p{
+    display: block;
+    height: 100vh;
+}
+
+.bodies{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 90;
+}
+
+
+
+.ERT{
+    background-image: url(media/ERT.gif);
+    height: 650px;
+    animation:ertmove 100s linear infinite;
+    background-repeat: no-repeat;
+    
+}
+.saturn{
+    background-image: url(media/saturn.gif);
+    width: 256px;
+    height: 256px;
+    position: absolute;
+    animation: saturn 30s linear infinite;
+
+}
+.twilightsparkle{
+    background-image: url(media/twilightsparkle.gif);
+    width: 100px;
+    height: 100px;
+    animation: twilightrotate 50s;
+}
+
+.twink{
+    background-image: url(media/twink.gif);
+    width: 500px;
+    height: 500px;
+    animation: twinkgrow 30s;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    padding: 0 5%;
+    }
+
+
+#ambience{
+    background: linear-gradient(117deg, rgba(1, 1, 3, 0.247) 0%, rgba(7, 7, 79, 0.514) 68%, rgba(0, 85, 128, 0.24) 100%);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 83;
+
+}
+@keyframes saturn{
+    0%  {transform:translate(200px, -300px);}
+    100%{transform:translate(1400px, 1000px);}
+}
+@keyframes ertmove{
+    0%  {transform:translate(-500px, -500px);}
+    100%{transform:translate(1900px, 400px);}
+}
+
+@keyframes twilightrotate{
+        0%{ transform: rotate(0deg);}
+        50%{transform:rotate(360deg);}
+        100%{transform:rotate(0deg);}
+}
+
+@keyframes twinkgrow{
+    0% {transform: scale(75%);}
+    50%{transform:scale(150%);}
+    100%{transform:scale(75%);}
+}
